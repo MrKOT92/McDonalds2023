@@ -1,16 +1,38 @@
 package ait.tr.services;
 
-public interface FoodService {
-public void createOrder();
-public void addFoodToOrder();
+import ait.tr.models.Food;
 
-public void showOrder();
+import ait.tr.repositories.FoodRepository;
+import ait.tr.repositories.FoodRepositoryDrink;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
-public void confirmOrderAndPay();
+public class FoodService implements IFoodService{
+  Scanner scanner = new Scanner(System.in);
+  public void createOrder(){
+    List<Food> order = new ArrayList<Food>();
+  };
+  public void addFoodToOrder(){};
 
-public void totalSumOrder();
+  public void showOrder(){};
 
-public void finalMessage();
+  public void confirmOrderAndPay(){};
 
-  }
+  public void totalSumOrder(){};
 
+  public void finalMessage(){};
+
+  public Food chooseDrink(FoodRepository drinkRepository){
+    List<Food> allDrinks = drinkRepository.findAll();
+    System.out.println("---- List of Drinks ----");
+    for (Food drink : allDrinks) {
+      System.out.println(allDrinks.indexOf(drink));
+      System.out.println("Title: " + drink.getTitle());
+      System.out.println("Price: " + drink.getPrice());
+      System.out.println();
+    }
+    int choice = scanner.nextInt();
+    return allDrinks.get(choice);
+  };
+}
