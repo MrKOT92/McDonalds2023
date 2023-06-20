@@ -1,5 +1,9 @@
 package ait.tr.app;
 
+import static ait.tr.menus.SubMenu.displayMenu;
+import static ait.tr.menus.SubMenu.handleOrderMenu;
+import static ait.tr.menus.SubMenu.handleSubMenu;
+
 import ait.tr.menus.SubMenu;
 import ait.tr.models.Food;
 import ait.tr.repositories.FoodRepository;
@@ -28,36 +32,26 @@ public class Main {
     // FoodService usersService = new UsersServiceImpl(usersRepository);
 
     while (true) {
-      System.out.println("1. Hello, Welcome in our Restaurant! ");
-      // comment create new orders / id / here or to go
-
+      System.out.println("1. Hello, Welcome to our Restaurant!");
       System.out.println("0. Exit");
 
       int command = scanner.nextInt();
       switch (command) {
         case 1:
-          System.out.println(" Where you will eat? Press: 1-Here, 2-To Go)");
+          System.out.println("Where will you eat? Press: 1-Here, 2-To Go");
           typeOfOrder = scanner.nextInt();
-          while (true) {
-            SubMenu subMenu = new SubMenu();
-            int subChoice = scanner.nextInt();
-            subMenu.HandleSubMenu(subChoice, service, drinkRepository);
-          }
+          displayMenu();
 
-        case 4:
-         service.chooseDrink(drinkRepository);
+          int subChoice = scanner.nextInt();
+          handleSubMenu(subChoice, service, drinkRepository);
+          break;
+        case 0:
+          System.exit(0);
           break;
         default:
           System.out.println("Invalid choice");
           break;
       }
-
-//      switch (command) {
-//        case 1 -> {
-//
-//        }
-//      }
-
     }
   }
 }
