@@ -1,12 +1,12 @@
-Strawberry milkshake|3,89|276|false|true|316
-Chocolate milkshake|3,89|277|false|true|325
-Vanilla milkshake|3,89|276|false|true|313
+Strawberry-milkshake|3.89|276|false|true|316
+Chocolate milkshake|3.89|277|false|true|325
+Vanilla-milkshake|3.89|276|false|true|313
 McFlurry Bounty|4.39|196|false|true|378
 McFlurry Oreo|4.39|204|false|true|432
-McFlurry Original + caramel sauce|4.39|217|false|true|495
-McFlurry Original + chocolate sauce|4.39|216|false|true|489
-McSundae Original|1.89|113|false|true|155
-McSundae Chocolate|1.89|113|false|true|191
-Apple pie|1.59|80|false|true|228
-Strawberry pie|1.59|78|false|true|250
-Bio McFreezy Strawberry-banana|1.69|74|true|true|40
+McFlurry-Original+caramel|4.39|217|false|true|495
+McFlurry-Original+chocolate|4.39|216|false|true|489
+McSundae-Original|1.89|113|false|true|155
+McSundae-Chocolate|1.89|113|false|true|191
+Apple-pie|1.59|80|false|true|228
+Strawberry-pie|1.59|78|false|true|250
+Bio-McFreezy-Strawberry-banana|1.69|74|true|true|401

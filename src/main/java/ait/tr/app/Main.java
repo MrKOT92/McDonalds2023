@@ -1,19 +1,14 @@
 package ait.tr.app;
 
 import static ait.tr.menus.SubMenu.displayMenu;
-import static ait.tr.menus.SubMenu.handleOrderMenu;
 import static ait.tr.menus.SubMenu.handleSubMenu;
 
-import ait.tr.menus.SubMenu;
-import ait.tr.models.Food;
 import ait.tr.repositories.FoodRepository;
 import ait.tr.repositories.FoodRepositoryBurger;
 import ait.tr.repositories.FoodRepositoryDessert;
 import ait.tr.repositories.FoodRepositoryDrink;
 import ait.tr.services.FoodService;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -25,11 +20,11 @@ public class Main {
     Scanner scanner = new Scanner(System.in);
     FoodService service = new FoodService();
 
-   // FoodRepository burgerRepository = new FoodRepositoryBurger("burger.txt");
-   // FoodRepository dessertRepository = new FoodRepositoryDessert("dessert.txt");
-     FoodRepository drinkRepository = new FoodRepositoryDrink("drink.txt");
+    FoodRepository burgerRepository = new FoodRepositoryBurger("burger.txt");
+    FoodRepository dessertRepository = new FoodRepositoryDessert("dessert.txt");
+    FoodRepository drinkRepository = new FoodRepositoryDrink("drink.txt");
 
-    // FoodService usersService = new UsersServiceImpl(usersRepository);
+    //FoodService usersService = new UsersServiceImpl(usersRepository);
 
     while (true) {
       System.out.println("1. Hello, Welcome to our Restaurant!");
@@ -43,9 +38,10 @@ public class Main {
           displayMenu();
 
           int subChoice = scanner.nextInt();
-          handleSubMenu(subChoice, service, drinkRepository);
+          handleSubMenu(subChoice, service, drinkRepository, burgerRepository,dessertRepository);
           break;
         case 0:
+          System.out.println("Goodbye!");
           System.exit(0);
           break;
         default:

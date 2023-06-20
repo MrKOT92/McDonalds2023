@@ -1,36 +1,35 @@
 package ait.tr.menus;
 
-import ait.tr.models.Food;
 import ait.tr.repositories.FoodRepository;
 import ait.tr.services.FoodService;
-import java.security.Provider.Service;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
 import java.util.Scanner;
 
 public class SubMenu {
 static Scanner scanner= new Scanner(System.in);
 
-  public static void handleSubMenu(int subChoice, FoodService service, FoodRepository drinkRepository) {
+  public static void handleSubMenu(int subChoice, FoodService service, FoodRepository drinkRepository,
+      FoodRepository burgerRepository, FoodRepository dessertRepository) {
     // Handle sub-menu choices here based on the selected subChoice
     switch (subChoice) {
       case 1:
-        // Logic for choosing a burger
+        service.chooseBurger(burgerRepository);
         break;
       case 2:
-        // Logic for choosing a dessert
+        service.chooseBurger(dessertRepository);
         break;
       case 3:
-        // Logic for choosing a drink
+        service.chooseDrink(drinkRepository);
         break;
       case 4:
         displayOrderMenu();
         int orderMenuChoice = scanner.nextInt();
-        handleOrderMenu(orderMenuChoice); // Handle order menu choices
+        handleOrderMenu(orderMenuChoice);
+        // Handle order menu choices
+
         break;
       case 0:
-        // Logic for exiting the sub-menu
+        System.out.println("GoodBye");
+        System.exit(0);
         break;
       default:
         System.out.println("Invalid choice");
