@@ -19,8 +19,18 @@ public class FoodService implements IFoodService{
 
   public void confirmOrderAndPay(){};
 
-  public void totalSumOrder(){};
-
+  public void totalSumOrder() {
+    List<Food> clientsOrder = new ArrayList<>();
+    double totalSum = 0;
+    if (clientsOrder.isEmpty()){
+      System.out.println("Mistake");
+    } else {
+      for (Food food : clientsOrder) {
+        totalSum += food.getPrice();
+      }
+    }
+  }
+  @Override
   public void finalMessage(){};
 
   public Food chooseDrink(FoodRepository drinkRepository){

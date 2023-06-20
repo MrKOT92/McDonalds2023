@@ -1,0 +1,8 @@
+Hamburger|1.2|96.0|false|false|253|beef|ketchup|
+Cheeseburger|2.3|109.0|false|false|302|beef|ketchup|
+Double Cheeseburger|3.4|163.0|false|false|442|beef|ketchup|
+McChicken Classic|4.0|171.0|false|false|402|chicken|mustard|
+Filet-o-Fish|4.2|137.0|false|false|331|fish|tar-tar|
+ChiliCheese|5.0|164|false|false|415|beef|chili|
+McRib|5.4|206.0|false|false|477|pork|chili
+McPlant|4.3|220.0|true|false|414|pea|mustard
