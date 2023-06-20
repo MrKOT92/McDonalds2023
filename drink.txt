@@ -1,4 +1,7 @@
-CocaCola-Classic|0.5|3|0.5|1|1|140
-ColaCola-Light|0.5|3|0.5|1|1|100
-CocaCola-Zero|0.5|3|0.5|1|1|50
-Sprite|0.5|3|0.5|1|1|140
+CocaCola-Classic|3|0.5|true|true|140|false|
+CocaCola-Classic|1.5|0.2|true|true|70|false|
+ColaCola-Light|3|0.5|true|true|100|false|
+ColaCola-Light|1.5|0.2|true|true|50|false|
+CocaCola-Zero|3|0.5|true|true|50|false|
+Sprite|3|0.5|true|true|140|false|
+Sprite|5|1.5|true|true|300|false|
