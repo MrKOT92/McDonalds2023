@@ -8,10 +8,10 @@ public interface IOrderService {
     Order createOrder();
     void addFoodToOrder(Order order, Food food);
     void showOrder(Order order);
-    void confirmOrderAndPay(Order order);
-    void payment();
+    boolean confirmOrder(Order order);
+    void payment(Order order);
     double totalSumOrder(Order order);
-    void clearOrder();
+    void clearOrder(Order order);
 
 
 }

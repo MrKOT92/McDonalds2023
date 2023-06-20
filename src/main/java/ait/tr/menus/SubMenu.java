@@ -1,24 +1,40 @@
 package ait.tr.menus;
 
-import ait.tr.repositories.FoodRepository;
+import ait.tr.models.Food;
+import ait.tr.models.Order;
+import ait.tr.repositories.*;
 import ait.tr.services.FoodService;
+import ait.tr.services.IOrderService;
+import ait.tr.services.OrderService;
+
 import java.util.Scanner;
 
 public class SubMenu {
 static Scanner scanner= new Scanner(System.in);
 
-  public static void handleSubMenu(int subChoice, FoodService service, FoodRepository drinkRepository,
-      FoodRepository burgerRepository, FoodRepository dessertRepository) {
+  public static void handleSubMenu(int subChoice, FoodService service, FoodRepositoryDrink drinkRepository,
+                                   FoodRepositoryBurger burgerRepository,
+                                   FoodRepositoryDessert dessertRepository, OrderService orderService) {
+
+    Order order = orderService.createOrder();
+    String idNumber = order.getId();
+
     // Handle sub-menu choices here based on the selected subChoice
     switch (subChoice) {
       case 1:
-        service.chooseBurger();
+        Food food = service.chooseBurger();
+        //add to order
+        orderService.addFoodToOrder(order,food);
         break;
       case 2:
-         service.chooseBurger();
+        food = service.chooseDessert();
+        //add to order
+        orderService.addFoodToOrder(order,food);
         break;
       case 3:
-        service.chooseDrink();
+        food = service.chooseDrink();
+        //add to order
+        orderService.addFoodToOrder(order,food);
         break;
       case 4:
         displayOrderMenu();
@@ -46,10 +62,14 @@ static Scanner scanner= new Scanner(System.in);
   public static void handleOrderMenu(int orderMenuChoice) {
     switch (orderMenuChoice) {
       case 1:
-        // Logic for checking the order
+        //TODO Logic for checking the order
+
+        //boolean confirmation = orderService.confirmOrderAndPay(order);
+
         break;
       case 2:
         // Logic for payment
+
         break;
       case 0:
         // Logic for going back to the main menu

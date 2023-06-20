@@ -4,17 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5aeb6a19-db9f-428b-a80a-5470ba0b8655" name="Changes" comment="add test">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ait/tr/services/IOrderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ait/tr/services/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="5aeb6a19-db9f-428b-a80a-5470ba0b8655" name="Changes" comment="add OrderService and interface IOrderService">
       <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/app/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/menus/SubMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/menus/SubMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/models/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/models/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/repositories/FoodRepositoryDessert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/repositories/FoodRepositoryDessert.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/repositories/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/repositories/OrderRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/services/FoodService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/services/FoodService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/services/IFoodService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/services/IFoodService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,12 +93,20 @@
       <option name="project" value="LOCAL" />
       <updated>1687171665601</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add OrderService and interface IOrderService">
+      <created>1687288847087</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1687288847087</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
     <MESSAGE value="add test" />
-    <option name="LAST_COMMIT_MESSAGE" value="add test" />
+    <MESSAGE value="add OrderService and interface IOrderService" />
+    <option name="LAST_COMMIT_MESSAGE" value="add OrderService and interface IOrderService" />
   </component>
 </project>

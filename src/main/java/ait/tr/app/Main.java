@@ -18,21 +18,21 @@ public class Main {
   public static void main(String[] args) throws FileNotFoundException {
 
     Scanner scanner = new Scanner(System.in);
-    FoodService service = new FoodService();
 
-    FoodRepository burgerRepository = new FoodRepositoryBurger("burger.txt");
-    FoodRepository dessertRepository = new FoodRepositoryDessert("dessert.txt");
-    FoodRepository drinkRepository = new FoodRepositoryDrink("drink.txt");
 
+    FoodRepositoryBurger burgerRepository = new FoodRepositoryBurger("burger.txt");
+    FoodRepositoryDessert dessertRepository = new FoodRepositoryDessert("dessert.txt");
+    FoodRepositoryDrink drinkRepository = new FoodRepositoryDrink("drink.txt");
+
+    FoodService service = new FoodService(burgerRepository, drinkRepository, dessertRepository);
     OrderRepository orderRepository = new OrderRepository("orders.txt");
     OrderService orderService = new OrderService(orderRepository);
 
-
+    //TODO tests
     //FoodService usersService = new UsersServiceImpl(usersRepository);
 
 
-    Order order = orderService.createOrder();
-    String idNumber = order.getId();
+
 
     while (true) {
       System.out.println("1. Hello, Welcome to our Restaurant!");
@@ -46,7 +46,7 @@ public class Main {
           displayMenu();
 
           int subChoice = scanner.nextInt();
-          handleSubMenu(subChoice, service, drinkRepository, burgerRepository,dessertRepository);
+          handleSubMenu(subChoice, service, drinkRepository, burgerRepository,dessertRepository, orderService);
           break;
         case 0:
           System.out.println("Goodbye!");

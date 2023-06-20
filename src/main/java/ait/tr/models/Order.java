@@ -10,12 +10,14 @@ public class Order {
     private int number;
     private static int countDayOrders = 1;
     private List<Food> orderlist;
+    private boolean isPayed;
 
     public Order() {
         this.id = UUID.randomUUID().toString();
         this.number = countDayOrders;
         this.orderlist = new ArrayList<>();
         this.countDayOrders++;
+        this.isPayed = false;
     }
 
     public String getId() {
@@ -28,5 +30,9 @@ public class Order {
 
     public List<Food> getOrderlist() {
         return orderlist;
+    }
+
+    public void setPayed(boolean payed) {
+        isPayed = payed;
     }
 }

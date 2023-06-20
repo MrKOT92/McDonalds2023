@@ -4,9 +4,10 @@ import ait.tr.models.Order;
 import ait.tr.repositories.OrderRepository;
 
 import java.util.List;
+import java.util.Scanner;
 
 public class OrderService implements IOrderService{
-
+ Scanner scanner = new Scanner(System.in);
     private OrderRepository orderRepository;
 
     public OrderService(OrderRepository orderRepository){
@@ -29,17 +30,23 @@ public class OrderService implements IOrderService{
         System.out.println(order);
     }
 
-    public void confirmOrderAndPay(Order order){
+    public boolean confirmOrder(Order order){
         showOrder(order);
         double totalSum = totalSumOrder(order);
-        System.out.println("Sum: " + totalSum);
-        ///if yes =
-        orderRepository.save(order);
-        //boolean
+        System.out.println("Sum: " + totalSum + System.lineSeparator() + "Confirm please(Y/N):");
+        String confirmation = scanner.nextLine();
+        if(confirmation.equalsIgnoreCase("y")){
+            orderRepository.save(order);
+            payment(order);
+            return true;
+        }
+        clearOrder(order);
+        return false;
+
     }
 
-    public void payment(){
-        //isPayd = true
+    public void payment(Order order){
+        order.setPayed(true);
     }
 
     public double totalSumOrder(Order order) {
@@ -55,7 +62,7 @@ public class OrderService implements IOrderService{
         return totalSum;
     }
 
-    public void clearOrder(){
-        ///list.clear
+    public void clearOrder(Order order){
+        order.getOrderlist().clear();
     }
 }
