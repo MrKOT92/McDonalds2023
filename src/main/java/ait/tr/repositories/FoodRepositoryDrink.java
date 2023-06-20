@@ -40,16 +40,14 @@ public class FoodRepositoryDrink implements FoodRepository{
   private static Drink parseLine(String line) {
     String[] parsed = line.split("\\|");
     String title = parsed[0];
-    double size = Double.parseDouble(parsed[1]);
-    double price = Double.parseDouble(parsed[2]);
-    double weight = Double.parseDouble(parsed[3]);
-    boolean isVegan = Boolean.parseBoolean(parsed[4]);
-    boolean isForKids = Boolean.parseBoolean(parsed[5]);
-    int calories = Integer.parseInt(parsed[6]);
-
-
+    double price = Double.parseDouble(parsed[1]);
+    double weight = Double.parseDouble(parsed[2]);
+    boolean isVegan = Boolean.parseBoolean(parsed[3]);
+    boolean isForKids = Boolean.parseBoolean(parsed[4]);
+    int calories = Integer.parseInt(parsed[5]);
+    boolean isAlcohol = Boolean.parseBoolean(parsed[6]);
     return new Drink(
-        title, size, price, weight, isVegan, isForKids, calories
+        title,  price, weight, isVegan, isForKids, calories, isAlcohol
     );
   }
 }
