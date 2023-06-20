@@ -3,11 +3,11 @@ package ait.tr.app;
 import static ait.tr.menus.SubMenu.displayMenu;
 import static ait.tr.menus.SubMenu.handleSubMenu;
 
-import ait.tr.repositories.FoodRepository;
-import ait.tr.repositories.FoodRepositoryBurger;
-import ait.tr.repositories.FoodRepositoryDessert;
-import ait.tr.repositories.FoodRepositoryDrink;
+import ait.tr.models.Order;
+import ait.tr.repositories.*;
 import ait.tr.services.FoodService;
+import ait.tr.services.OrderService;
+
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
@@ -24,7 +24,15 @@ public class Main {
     FoodRepository dessertRepository = new FoodRepositoryDessert("dessert.txt");
     FoodRepository drinkRepository = new FoodRepositoryDrink("drink.txt");
 
+    OrderRepository orderRepository = new OrderRepository("orders.txt");
+    OrderService orderService = new OrderService(orderRepository);
+
+
     //FoodService usersService = new UsersServiceImpl(usersRepository);
+
+
+    Order order = orderService.createOrder();
+    String idNumber = order.getId();
 
     while (true) {
       System.out.println("1. Hello, Welcome to our Restaurant!");

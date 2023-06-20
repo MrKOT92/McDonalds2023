@@ -11,7 +11,7 @@ import java.util.List;
 
 public class FoodRepositoryDessert implements FoodRepository{
   private String fileName;
-  public void FoodRepositoryDessertTextImpl(String fileName) {
+  public FoodRepositoryDessert(String fileName) {
     this.fileName = fileName;
   }
 
@@ -48,17 +48,5 @@ public class FoodRepositoryDessert implements FoodRepository{
         title, price, weight, isVegan, isForKids,calories
     );
   }
-//  public void saveNewUser(Food dessert) {
-//
-//    try (
-//        FileWriter fileWriter = new FileWriter(fileName, true);
-//        BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)) {;
-//      bufferedWriter.write(dessert.getTitle() + "|" + dessert.getPrice() + "|" + dessert.getWeight()
-//          + "|" + dessert.isVegan() + "|" + dessert.isForKids() + "|" + dessert.getCalories());
-//      bufferedWriter.newLine();
-//
-//    } catch (Exception e) {
-//      System.out.println("Произошла ошибка");
-//    }
-//  }
+
 }

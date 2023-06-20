@@ -1,17 +1,19 @@
 package ait.tr.services;
 
+import ait.tr.models.Food;
+import ait.tr.models.Order;
+import ait.tr.repositories.FoodRepositoryBurger;
+import ait.tr.repositories.FoodRepositoryDessert;
+import ait.tr.repositories.FoodRepositoryDrink;
+
 public interface IFoodService {
-public  void showMenu();
-public void createOrder();
-public void addFoodToOrder();
+  Food chooseDrink();
+  Food chooseBurger();
+  Food chooseDessert();
 
-public void showOrder();
+  void finalMessage();
 
-public void confirmOrderAndPay();
+}
 
-public void totalSumOrder();
 
-public void finalMessage();
-
-  }
 

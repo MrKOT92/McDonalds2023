@@ -5,15 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5aeb6a19-db9f-428b-a80a-5470ba0b8655" name="Changes" comment="add test">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ait/tr/menus/SubMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ait/tr/services/IFoodService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ait/tr/services/IOrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ait/tr/services/OrderService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drink.txt" beforeDir="false" afterPath="$PROJECT_DIR$/drink.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/app/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/models/Drink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/models/Drink.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/repositories/FoodRepositoryBurger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/repositories/FoodRepositoryBurger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/repositories/FoodRepositoryDrink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/repositories/FoodRepositoryDrink.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/menus/SubMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/menus/SubMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/models/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/models/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/repositories/FoodRepositoryDessert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/repositories/FoodRepositoryDessert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/repositories/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/repositories/OrderRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/services/FoodService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/services/FoodService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/services/IFoodService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/services/IFoodService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

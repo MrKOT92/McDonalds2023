@@ -8,14 +8,14 @@ public class Order {
 
     private String id;
     private int number;
-    private static int COUNTDAYORDERS = 1;
+    private static int countDayOrders = 1;
     private List<Food> orderlist;
 
     public Order() {
         this.id = UUID.randomUUID().toString();
-        this.number = COUNTDAYORDERS;
+        this.number = countDayOrders;
         this.orderlist = new ArrayList<>();
-        this.COUNTDAYORDERS++;
+        this.countDayOrders++;
     }
 
     public String getId() {

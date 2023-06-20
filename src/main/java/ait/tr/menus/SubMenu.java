@@ -12,13 +12,13 @@ static Scanner scanner= new Scanner(System.in);
     // Handle sub-menu choices here based on the selected subChoice
     switch (subChoice) {
       case 1:
-        service.chooseBurger(burgerRepository);
+        service.chooseBurger();
         break;
       case 2:
-        service.chooseBurger(dessertRepository);
+         service.chooseBurger();
         break;
       case 3:
-        service.chooseDrink(drinkRepository);
+        service.chooseDrink();
         break;
       case 4:
         displayOrderMenu();
