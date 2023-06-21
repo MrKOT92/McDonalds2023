@@ -17,7 +17,7 @@ static Scanner scanner= new Scanner(System.in);
                                    FoodRepositoryDessert dessertRepository, OrderService orderService) {
 
     Order order = orderService.createOrder();
-    String idNumber = order.getId();
+    //String idNumber = order.getId();
 
     // Handle sub-menu choices here based on the selected subChoice
     switch (subChoice) {
@@ -59,12 +59,14 @@ static Scanner scanner= new Scanner(System.in);
     System.out.println("0. Back to menu");
   }
 
-  public static void handleOrderMenu(int orderMenuChoice) {
+  public static void handleOrderMenu(int orderMenuChoice, FoodService service, FoodRepositoryDrink drinkRepository,
+                                     FoodRepositoryBurger burgerRepository,
+                                     FoodRepositoryDessert dessertRepository, OrderService orderService) {
     switch (orderMenuChoice) {
       case 1:
         //TODO Logic for checking the order
 
-        //boolean confirmation = orderService.confirmOrderAndPay(order);
+        //boolean confirmation = orderService.confirmOrder(order);
 
         break;
       case 2:
