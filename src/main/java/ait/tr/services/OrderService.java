@@ -30,20 +30,33 @@ public class OrderService implements IOrderService{
         System.out.println(order);
     }
 
-    public boolean confirmOrder(Order order){
-        showOrder(order);
-        double totalSum = totalSumOrder(order);
-        System.out.println("Sum: " + totalSum + System.lineSeparator() + "Confirm please(Y/N):");
-        String confirmation = scanner.nextLine();
-        if(confirmation.equalsIgnoreCase("y")){
-            orderRepository.save(order);
-            payment(order);
-            return true;
-        }
+  public boolean confirmOrder(Order order) {
+    showOrder(order);
+    double totalSum = totalSumOrder(order);
+
+    String confirmation;
+    boolean validConfirmation = false;
+
+    while (!validConfirmation) {
+      System.out.println("Sum: " + totalSum + System.lineSeparator() + "Confirm please (Y/N):");
+      confirmation = scanner.nextLine();
+
+      if (confirmation.equalsIgnoreCase("Y")) {
+        validConfirmation = true;
+        orderRepository.save(order);
+        payment(order);
+        return true;
+      } else if (confirmation.equalsIgnoreCase("N")) {
+        validConfirmation = true;
         clearOrder(order);
         return false;
-
+      } else {
+        System.out.println("Invalid input. Please enter 'Y' or 'N'.");
+      }
     }
+
+    return false;
+  }
 
     public void payment(Order order){
         order.setPayed(true);
@@ -66,3 +79,16 @@ public class OrderService implements IOrderService{
         order.getOrderlist().clear();
     }
 }
+//  public boolean confirmOrder(Order order){
+//        showOrder(order);
+//        double totalSum = totalSumOrder(order);
+//        System.out.println("Sum: " + totalSum + System.lineSeparator() + "Confirm please(Y/N):");
+//        String confirmation = scanner.nextLine();
+//        if(confirmation.equalsIgnoreCase("y")){
+//            orderRepository.save(order);
+//            payment(order);
+//            return true;
+//        }
+//        clearOrder(order);
+//        return false;
+//    }
