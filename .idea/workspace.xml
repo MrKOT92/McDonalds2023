@@ -4,26 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5aeb6a19-db9f-428b-a80a-5470ba0b8655" name="Changes" comment="dell FoodRepositoryListImpl.java&#10;add FoodRepositoryListBurger&#10;add FoodRepositoryListDrink&#10;add FoodRepositoryListDessert">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ait/tr/services/forTest/FoodServiceBurger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ait/tr/services/FoodServiceBurgerTest.java" afterDir="false" />
+    <list default="true" id="5aeb6a19-db9f-428b-a80a-5470ba0b8655" name="Changes" comment="update project">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ait/tr/menus/AdminMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ait/tr/menus/Menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ait/tr/repositories/OrderRepositoryListImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ait/tr/services/OrderServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/app/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/menus/SubMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/menus/SubMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/models/Burger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/models/Burger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/models/Drink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/models/Drink.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/models/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/models/Food.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/models/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/models/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/repositories/FoodRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/repositories/FoodRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/repositories/FoodRepositoryListBurger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/repositories/forTest/FoodRepositoryListBurger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/repositories/FoodRepositoryListDessert.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/repositories/FoodRepositoryListDrink.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/repositories/FoodRepositoryListImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/repositories/FoodRepositoryBurger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/repositories/FoodRepositoryBurger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/repositories/FoodRepositoryDessert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/repositories/FoodRepositoryDessert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/repositories/FoodRepositoryDrink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/repositories/FoodRepositoryDrink.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/repositories/IOrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/repositories/IOrderRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/repositories/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/repositories/OrderRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/repositories/forTest/FoodRepositoryListBurger.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/services/FoodService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/services/FoodService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/services/IFoodService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/services/IFoodService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/services/IOrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/services/IOrderService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/services/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/services/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ait/tr/services/FoodServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/services/forTest/FoodServiceBurger.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ait/tr/services/FoodServiceBurgerTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +42,19 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="97ea58d1-c85f-4918-b390-251c328a9b2a" />
+        <option name="url" value="https://github.com/MrKOT92/Project-McDonald.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -68,7 +82,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_opened_file_path": "C:/AIT Course/basic programming java/Javaprojects/Projects/McDonalds/MC",
+    "last_opened_file_path": "C:/AIT Course/basic programming java/Javaprojects/Projects/projects/SimpleProject",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0"
@@ -84,6 +98,19 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
+    <configuration name="AdminMenu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ait.tr.menus.AdminMenu" />
+      <module name="McDonalds" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ait.tr.menus.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ait.tr.app.Main" />
       <module name="McDonalds" />
@@ -97,7 +124,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FoodServiceBurgerTest.TestNegative_chooseBurger1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OrderServiceTest.confirmOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="McDonalds" />
       <extension name="coverage">
         <pattern>
@@ -106,14 +133,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ait.tr.services" />
-      <option name="MAIN_CLASS_NAME" value="ait.tr.services.FoodServiceBurgerTest" />
-      <option name="METHOD_NAME" value="TestNegative_chooseBurger1" />
+      <option name="MAIN_CLASS_NAME" value="ait.tr.services.OrderServiceTest" />
+      <option name="METHOD_NAME" value="confirmOrder" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FoodServiceBurgerTest.TestPositive_chooseBurger" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OrderServiceTest.getTotalSumOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="McDonalds" />
       <extension name="coverage">
         <pattern>
@@ -122,14 +149,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ait.tr.services" />
-      <option name="MAIN_CLASS_NAME" value="ait.tr.services.FoodServiceBurgerTest" />
-      <option name="METHOD_NAME" value="TestPositive_chooseBurger" />
+      <option name="MAIN_CLASS_NAME" value="ait.tr.services.OrderServiceTest" />
+      <option name="METHOD_NAME" value="getTotalSumOrder" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FoodServiceBurgerTest.chooseBurger" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OrderServiceTest.getTotalSumOrderIfNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="McDonalds" />
       <extension name="coverage">
         <pattern>
@@ -138,8 +165,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ait.tr.services" />
-      <option name="MAIN_CLASS_NAME" value="ait.tr.services.FoodServiceBurgerTest" />
-      <option name="METHOD_NAME" value="chooseBurger" />
+      <option name="MAIN_CLASS_NAME" value="ait.tr.services.OrderServiceTest" />
+      <option name="METHOD_NAME" value="getTotalSumOrderIfNull" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -148,9 +175,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.FoodServiceBurgerTest.TestPositive_chooseBurger" />
-        <item itemvalue="JUnit.FoodServiceBurgerTest.TestNegative_chooseBurger1" />
-        <item itemvalue="JUnit.FoodServiceBurgerTest.chooseBurger" />
+        <item itemvalue="JUnit.OrderServiceTest.confirmOrder" />
+        <item itemvalue="JUnit.OrderServiceTest.getTotalSumOrderIfNull" />
+        <item itemvalue="JUnit.OrderServiceTest.getTotalSumOrder" />
+        <item itemvalue="Application.AdminMenu" />
       </list>
     </recent_temporary>
   </component>
@@ -226,8 +254,26 @@
       <option name="project" value="LOCAL" />
       <updated>1687368965110</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="update project">
+      <created>1687429005868</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1687429005868</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
@@ -239,6 +285,7 @@
     <MESSAGE value="add FoodRepositoryListImpl" />
     <MESSAGE value="add FoodServiceTest" />
     <MESSAGE value="dell FoodRepositoryListImpl.java&#10;add FoodRepositoryListBurger&#10;add FoodRepositoryListDrink&#10;add FoodRepositoryListDessert" />
-    <option name="LAST_COMMIT_MESSAGE" value="dell FoodRepositoryListImpl.java&#10;add FoodRepositoryListBurger&#10;add FoodRepositoryListDrink&#10;add FoodRepositoryListDessert" />
+    <MESSAGE value="update project" />
+    <option name="LAST_COMMIT_MESSAGE" value="update project" />
   </component>
 </project>

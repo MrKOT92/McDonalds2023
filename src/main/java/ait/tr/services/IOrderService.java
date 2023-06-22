@@ -7,11 +7,9 @@ public interface IOrderService {
 
     Order createOrder();
     void addFoodToOrder(Order order, Food food);
-    void showOrder(Order order);
     boolean confirmOrder(Order order);
     void payment(Order order);
-    double totalSumOrder(Order order);
+    double getTotalSumOrder(Order order);
     void clearOrder(Order order);
-
 
 }

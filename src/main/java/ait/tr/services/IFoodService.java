@@ -7,11 +7,10 @@ import ait.tr.repositories.FoodRepositoryDessert;
 import ait.tr.repositories.FoodRepositoryDrink;
 
 public interface IFoodService {
-  Food chooseDrink();
-  Food chooseBurger();
-  Food chooseDessert();
+  Food chooseDrink(int choice);
+  Food chooseBurger(int choice);
+  Food chooseDessert(int choice);
 
-  void finalMessage();
 
 }
 

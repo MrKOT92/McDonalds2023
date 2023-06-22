@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FoodRepositoryDessert implements FoodRepository{
-  private String fileName;
+  private final String fileName;
   public FoodRepositoryDessert(String fileName) {
     this.fileName = fileName;
   }

@@ -25,26 +25,25 @@ public class FoodService implements IFoodService {
 
     }
 
-    Scanner scanner = new Scanner(System.in);
+    //Scanner scanner = new Scanner(System.in);
 
     @Override
-    public Food chooseDrink() {
+    public Food chooseDrink(int choice) {
         List<Food> allDrinks = foodRepositoryDrink.findAll();
-        printMenu(allDrinks);
-        int choice = scanner.nextInt();
+        //foodRepositoryDrink.printMenu();
+        //int choice = scanner.nextInt();
         if (choice > allDrinks.size() - 1) {
             throw new IndexOutOfBoundsException("NON in menu");
         }
         return allDrinks.get(choice - 1);
-
     }
 
 
     @Override
-    public Food chooseBurger() {
+    public Food chooseBurger(int choice) {
         List<Food> allBurgers = foodRepositoryBurger.findAll();
-        printMenu(allBurgers);
-        int choice = scanner.nextInt();
+        //foodRepositoryBurger.printMenu();
+        //int choice = scanner.nextInt();
         if (choice > allBurgers.size() - 1) {
             throw new IndexOutOfBoundsException("NON in menu");
         }
@@ -53,29 +52,15 @@ public class FoodService implements IFoodService {
     }
 
     @Override
-    public Food chooseDessert() {
+    public Food chooseDessert(int choice) {
         List<Food> allDessert = foodRepositoryDessert.findAll();
-        printMenu(allDessert);
-        int choice = scanner.nextInt();
+        //foodRepositoryDrink.printMenu();
+        //int choice = scanner.nextInt();
         if (choice > allDessert.size() - 1) {
             throw new IndexOutOfBoundsException("NON in menu");
         }
         return allDessert.get(choice - 1);
 
-    }
-
-    private void printMenu(List<Food> list) {
-        System.out.println("---- Menu ----");
-        for (Food food : list) {
-            System.out.println(list.indexOf(food) + 1 + ". " +
-                    food.getTitle() + " " + food.getPrice());
-        }
-    }
-
-    //TODO
-    @Override
-    public void finalMessage() {
-        System.out.println("Thank you");
     }
 
 

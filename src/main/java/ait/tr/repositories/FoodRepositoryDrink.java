@@ -11,7 +11,7 @@ import java.util.List;
 public class FoodRepositoryDrink implements FoodRepository{
 
 
-  private String fileName;
+  private final String fileName;
 
   public  FoodRepositoryDrink(String fileName) {
     this.fileName = fileName;

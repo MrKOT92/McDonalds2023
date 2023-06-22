@@ -10,6 +10,9 @@ import ait.tr.services.OrderService;
 import java.util.Scanner;
 
 public class SubMenu {
+
+  private FoodRepositoryBurger foodRepositoryBurger;
+  private Menu menu;
 static Scanner scanner= new Scanner(System.in);
 
   public static void displayMenu() {
@@ -22,8 +25,7 @@ static Scanner scanner= new Scanner(System.in);
 
 //TODO ????
   public static void handleSubMenu(int subChoice, FoodService service,
-                                  OrderService orderService) {
-
+                                  OrderService orderService, FoodRepositoryBurger foodRepositoryBurger, Menu menu) {
 
     Order order = orderService.createOrder(); //Order{id='63694687-671e-417a-a9a8-b56598867283', number=1, orderlist=[], isPayed=false}
 
@@ -31,25 +33,31 @@ static Scanner scanner= new Scanner(System.in);
     switch (subChoice) {
       case 1:
 
-        Food food = service.chooseBurger();
+        menu.printMenuBurger();
+        int choiceBurger = scanner.nextInt();
+        Food food = service.chooseBurger(choiceBurger);
         //add to order
         orderService.addFoodToOrder(order,food);
         //break;
       case 2:
-        food = service.chooseDessert();
+        menu.printMenuDessert();
+        int choiceDessert = scanner.nextInt();
+        food = service.chooseDessert(choiceDessert);
         //add to order
         orderService.addFoodToOrder(order,food);
         //break;
 
       case 3:
-        food = service.chooseDrink();
+        menu.printMenuDrink();
+        int choiceDrink = scanner.nextInt();
+        food = service.chooseDrink(choiceDrink);
         //add to order
         orderService.addFoodToOrder(order,food);
         //break
       case 4:
         displayOrderMenu();
         int orderMenuChoice = scanner.nextInt();
-        handleOrderMenu(orderMenuChoice, orderService, order);
+        handleOrderMenu(orderMenuChoice, orderService, order, menu);
         // Handle order menu choices
         //TODO ??? return displayOrderMenu
         break;
@@ -69,13 +77,18 @@ static Scanner scanner= new Scanner(System.in);
   }
 
   //TODO after 1. return to displayMenu
-  public static void handleOrderMenu(int orderMenuChoice, OrderService orderService, Order order) {
+  public static void handleOrderMenu(int orderMenuChoice, OrderService orderService, Order order, Menu menu) {
     switch (orderMenuChoice) {
       case 1:
         //TODO Logic for checking the order
-
+        menu.printOrder(order);
         boolean confirmation = orderService.confirmOrder(order);
-
+         if (confirmation){
+           menu.finalMessage(order);
+         }
+         else {
+           System.out.println("Sorry you order not payed");
+         }
         break;
 
         //TODO case 0  = back to displayMenu()

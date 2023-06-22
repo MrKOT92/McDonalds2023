@@ -42,6 +42,7 @@ public class Order {
         isPayed = payed;
     }
 
-
-
+    public boolean isPayed() {
+        return isPayed;
+    }
 }
