@@ -4,9 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5aeb6a19-db9f-428b-a80a-5470ba0b8655" name="Changes" comment="add OrderService and interface IOrderService">
+    <list default="true" id="5aeb6a19-db9f-428b-a80a-5470ba0b8655" name="Changes" comment="dell FoodRepositoryListImpl.java&#10;add FoodRepositoryListBurger&#10;add FoodRepositoryListDrink&#10;add FoodRepositoryListDessert">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ait/tr/services/forTest/FoodServiceBurger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ait/tr/services/FoodServiceBurgerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/app/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/menus/SubMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/menus/SubMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/models/Burger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/models/Burger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/models/Drink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/models/Drink.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/models/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/models/Food.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/models/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/models/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/repositories/FoodRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/repositories/FoodRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/repositories/FoodRepositoryListBurger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/repositories/forTest/FoodRepositoryListBurger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/repositories/FoodRepositoryListDessert.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/repositories/FoodRepositoryListDrink.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/repositories/FoodRepositoryListImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/repositories/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/repositories/OrderRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/services/FoodService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/services/FoodService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/services/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/services/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ait/tr/services/FoodServiceTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +35,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -34,23 +52,38 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
+  </component>
   <component name="ProjectId" id="2RPvrCUAyL0vfwOtzKP2JVamLom" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "C:/AIT Course/basic programming java/Javaprojects/Projects/McDonalds/MC",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
-}</component>
-  <component name="RunManager">
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="ait.tr.services" />
+      <recent name="ait.tr.repositories" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ait.tr.app.Main" />
       <module name="McDonalds" />
@@ -64,9 +97,60 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="FoodServiceBurgerTest.TestNegative_chooseBurger1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="McDonalds" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ait.tr.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ait.tr.services" />
+      <option name="MAIN_CLASS_NAME" value="ait.tr.services.FoodServiceBurgerTest" />
+      <option name="METHOD_NAME" value="TestNegative_chooseBurger1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FoodServiceBurgerTest.TestPositive_chooseBurger" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="McDonalds" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ait.tr.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ait.tr.services" />
+      <option name="MAIN_CLASS_NAME" value="ait.tr.services.FoodServiceBurgerTest" />
+      <option name="METHOD_NAME" value="TestPositive_chooseBurger" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FoodServiceBurgerTest.chooseBurger" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="McDonalds" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ait.tr.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ait.tr.services" />
+      <option name="MAIN_CLASS_NAME" value="ait.tr.services.FoodServiceBurgerTest" />
+      <option name="METHOD_NAME" value="chooseBurger" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.FoodServiceBurgerTest.TestPositive_chooseBurger" />
+        <item itemvalue="JUnit.FoodServiceBurgerTest.TestNegative_chooseBurger1" />
+        <item itemvalue="JUnit.FoodServiceBurgerTest.chooseBurger" />
       </list>
     </recent_temporary>
   </component>
@@ -100,13 +184,61 @@
       <option name="project" value="LOCAL" />
       <updated>1687288847087</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add variable isPayed">
+      <created>1687290948676</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1687290948676</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add var to HandleOrderMenu">
+      <created>1687334635094</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1687334635094</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add interface IOederRepository">
+      <created>1687341235285</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1687341235285</updated>
+    </task>
+    <task id="LOCAL-00007" summary="add FoodRepositoryListImpl">
+      <created>1687357797024</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1687357797024</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add FoodServiceTest">
+      <created>1687367837708</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1687367837708</updated>
+    </task>
+    <task id="LOCAL-00009" summary="dell FoodRepositoryListImpl.java&#10;add FoodRepositoryListBurger&#10;add FoodRepositoryListDrink&#10;add FoodRepositoryListDessert">
+      <created>1687368965110</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1687368965110</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
     <MESSAGE value="add test" />
     <MESSAGE value="add OrderService and interface IOrderService" />
-    <option name="LAST_COMMIT_MESSAGE" value="add OrderService and interface IOrderService" />
+    <MESSAGE value="add variable isPayed" />
+    <MESSAGE value="add var to HandleOrderMenu" />
+    <MESSAGE value="add interface IOederRepository" />
+    <MESSAGE value="add FoodRepositoryListImpl" />
+    <MESSAGE value="add FoodServiceTest" />
+    <MESSAGE value="dell FoodRepositoryListImpl.java&#10;add FoodRepositoryListBurger&#10;add FoodRepositoryListDrink&#10;add FoodRepositoryListDessert" />
+    <option name="LAST_COMMIT_MESSAGE" value="dell FoodRepositoryListImpl.java&#10;add FoodRepositoryListBurger&#10;add FoodRepositoryListDrink&#10;add FoodRepositoryListDessert" />
   </component>
 </project>

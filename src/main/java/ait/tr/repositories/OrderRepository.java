@@ -5,7 +5,7 @@ import ait.tr.models.Order;
 import java.util.ArrayList;
 import java.util.List;
 
-public class OrderRepository {
+public class OrderRepository implements IOrderRepository{
 
     private List<Order> dayOrders = new ArrayList<>();
 
@@ -36,4 +36,6 @@ public class OrderRepository {
         }
         throw new NullPointerException("Order is not found");
     }
+
+
 }

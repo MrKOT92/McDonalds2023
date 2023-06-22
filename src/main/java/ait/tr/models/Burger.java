@@ -25,11 +25,4 @@ public class Burger extends Food{
     this.sauce = sauce;
   }
 
-  @Override
-  public String toString() {
-    return "Burger{" +super.toString()+
-        "cutletType='" + cutletType + '\'' +
-        ", sauce='" + sauce + '\'' +
-        '}';
-  }
 }

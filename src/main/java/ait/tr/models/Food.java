@@ -1,5 +1,7 @@
 package ait.tr.models;
 
+import java.util.Objects;
+
 public class Food {
 
   private String title;
@@ -78,4 +80,18 @@ public class Food {
         ", calories=" + calories +
         '}';
   }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) return true;
+    if (!(o instanceof Food food)) return false;
+    return Double.compare(food.getPrice(), getPrice()) == 0 && Double.compare(food.getWeight(), getWeight()) == 0 && isVegan() == food.isVegan() && isForKids() == food.isForKids() && getCalories() == food.getCalories() && Objects.equals(getTitle(), food.getTitle());
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(getTitle(), getPrice(), getWeight(), isVegan(), isForKids(), getCalories());
+  }
+
+
 }

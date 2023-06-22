@@ -14,4 +14,5 @@ public class Drink extends Food{
     public boolean isAlcohol() {
         return isAlcohol;
     }
+
 }

@@ -14,10 +14,11 @@ public class OrderService implements IOrderService{
         this.orderRepository = orderRepository;
 
     }
-
+//TODO
     public Order createOrder(){
         Order order = new Order();
         //orderRepository.save(order);
+        System.out.println(order);
         return order;
     }
 
@@ -25,25 +26,64 @@ public class OrderService implements IOrderService{
         order.getOrderlist().add(food);
     }
 
-    //TODO better
     public void showOrder(Order order){
-        System.out.println(order);
+        System.out.println("_________________");
+        System.out.println("Your order number: " + order.getNumber());
+        List<Food> list = order.getOrderlist();
+        for (Food food: list
+             ) {
+            System.out.println(food.getTitle() + " " + food.getPrice());
+        }
+        System.out.println("_________________");
     }
 
-    public boolean confirmOrder(Order order){
+
+    //TODO check NO YES anna
+    //TODO del sout
+//    public boolean confirmOrder(Order order){
+//        showOrder(order);
+//        double totalSum = totalSumOrder(order);
+//        System.out.println("Total sum: " + totalSum + System.lineSeparator() + "Confirm please and pay(Y/N):");
+//        String confirmation = scanner.nextLine();
+//        if(confirmation.equalsIgnoreCase("y")){
+//            orderRepository.save(order);
+//            System.out.println(orderRepository); /// del
+//            payment(order);
+//            return true;
+//        }
+//        clearOrder(order);
+//        return false;
+//
+//    }
+
+    public boolean confirmOrder(Order order) {
         showOrder(order);
         double totalSum = totalSumOrder(order);
-        System.out.println("Sum: " + totalSum + System.lineSeparator() + "Confirm please(Y/N):");
-        String confirmation = scanner.nextLine();
-        if(confirmation.equalsIgnoreCase("y")){
-            orderRepository.save(order);
-            payment(order);
-            return true;
-        }
-        clearOrder(order);
-        return false;
 
+        String confirmation;
+        boolean validConfirmation = false;
+
+        while (!validConfirmation) {
+            System.out.println("Sum: " + totalSum + System.lineSeparator() + "Confirm please (Y/N):");
+            confirmation = scanner.nextLine();
+
+            if (confirmation.equalsIgnoreCase("Y")) {
+                validConfirmation = true;
+                orderRepository.save(order);
+                payment(order);
+                return true;
+            } else if (confirmation.equalsIgnoreCase("N")) {
+                validConfirmation = true;
+                clearOrder(order);
+                return false;
+            } else {
+                System.out.println("Invalid input. Please enter 'Y' or 'N'.");
+            }
+        }
+
+        return false;
     }
+
 
     public void payment(Order order){
         order.setPayed(true);
