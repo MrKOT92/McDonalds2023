@@ -1,0 +1,1 @@
+ec0c9954-9492-4024-9d62-ab95b16964a6|1|[Food{title='Hamburger', price=1.2, weight=96.0, isVegan=false, isForKids=false, calories=253}, Food{title='Strawberry-milkshake', price=3.89, weight=276.0, isVegan=false, isForKids=true, calories=316}, Food{title='CocaCola-Classic', price=3.0, weight=0.5, isVegan=true, isForKids=true, calories=140}]|false

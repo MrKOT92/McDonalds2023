@@ -2,9 +2,7 @@ package ait.tr.repositories;
 
 import ait.tr.models.Order;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -44,9 +42,30 @@ public class OrderRepository implements IOrderRepository{
         throw new NullPointerException("Order is not found");
 
 
+        }
 
-    }
+        public  Order findByIdFile(String id) {
 
+//        if(id == null){
+//            throw new NullPointerException("Order is not found");
+//    }
+
+            try (BufferedReader reader = new BufferedReader(new FileReader(fileName))){
+
+//                return reader.lines()
+//                        .map(line ->line.split("\\|"))
+//                        .filter(parsed -> parsed[0].equals(id))
+//                        .map()
+//                        .findFirst().orElse(null);
+
+
+
+            } catch (IOException e) { System.out.println("File error" + e.getMessage()); }
+
+
+           return null;
+
+        }
 
 
 
