@@ -27,17 +27,15 @@ public class SubMenu {
   public static void handleSubMenu(int subChoice, FoodService service,
       OrderService orderService, FoodRepositoryBurger foodRepositoryBurger, MenuView menu) {
 
-
-    Order order = orderService.createOrder(); //Order{id='63694687-671e-417a-a9a8-b56598867283', number=1, orderlist=[], isPayed=false}
-
+    Order order = orderService.createOrder(); // Order{id='63694687-671e-417a-a9a8-b56598867283', number=1, orderlist=[], isPayed=false}
 
     while (true) {
-      // Handle sub-menu choices here based on the selected subChoice
+
       switch (subChoice) {
         case 1:
           try {
             menu.printMenuBurger();
-            int choiceBurger = scanner.nextInt();
+            int choiceBurger = Integer.parseInt(scanner.nextLine());
             Food food = service.chooseBurger(choiceBurger);
             orderService.addFoodToOrder(order, food);
           } catch (NumberFormatException e) {
@@ -49,12 +47,12 @@ public class SubMenu {
           }
           break;
         case 2:
-          try{
+          try {
             menu.printMenuDessert();
-            int choiceDessert = scanner.nextInt();
+            int choiceDessert = Integer.parseInt(scanner.nextLine());
             Food food = service.chooseDessert(choiceDessert);
-            orderService.addFoodToOrder(order, food);}
-          catch (NumberFormatException e) {
+            orderService.addFoodToOrder(order, food);
+          } catch (NumberFormatException e) {
             System.out.println("Invalid input. Please enter a number.");
             continue; // Retry with the same subChoice
           } catch (IndexOutOfBoundsException e) {
@@ -62,16 +60,14 @@ public class SubMenu {
             continue; // Retry with the same subChoice
           }
           break;
-
         case 3:
           try {
             menu.printMenuDrink();
-            int choiceDrink = scanner.nextInt();
+            int choiceDrink = Integer.parseInt(scanner.nextLine());
             Food food = service.chooseDrink(choiceDrink);
-            //add to order
+            // Add to order
             orderService.addFoodToOrder(order, food);
-          }
-          catch (NumberFormatException e) {
+          } catch (NumberFormatException e) {
             System.out.println("Invalid input. Please enter a number.");
             continue; // Retry with the same subChoice
           } catch (IndexOutOfBoundsException e) {
@@ -79,38 +75,37 @@ public class SubMenu {
             continue; // Retry with the same subChoice
           }
           break;
-
-
         case 4:
           displayOrderMenu();
           try {
-
-
             int orderMenuChoice = Integer.parseInt(scanner.nextLine());
             handleOrderMenu(orderMenuChoice, orderService, order, menu);
+            if (orderMenuChoice == 0) {
+             return; // Return to the main menu
+            }
           } catch (NumberFormatException e) {
             System.out.println("Invalid input. Please enter a number.");
           }
           break;
-
         case 0:
-          System.out.println("GoodBye");
-          System.exit(0);
-          break;
+          System.out.println("Goodbye!");
+          return; // Return to the main menu
         default:
           System.out.println("Invalid choice");
           break;
       }
-
 
       displayMenu();
       try {
         subChoice = Integer.parseInt(scanner.nextLine());
       } catch (NumberFormatException e) {
         System.out.println("Invalid input. Please enter a number.");
+      }catch (IndexOutOfBoundsException e) {
+        System.out.println("Invalid choice. Please choose a valid option.");
+      }
       }
     }
-  }
+
   public static void displayOrderMenu() {
     System.out.println("1. Check your order and payment");
     System.out.println("0. Back to menu");  ///
@@ -132,7 +127,6 @@ public class SubMenu {
         break;
 
       //TODO case 0  = back to displayMenu()
-
       case 0:
         //displayMenu();
 
@@ -143,5 +137,4 @@ public class SubMenu {
         break;
     }
   }
-
 }
