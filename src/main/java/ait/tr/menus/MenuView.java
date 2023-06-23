@@ -5,17 +5,16 @@ import ait.tr.models.Order;
 import ait.tr.repositories.FoodRepositoryBurger;
 import ait.tr.repositories.FoodRepositoryDessert;
 import ait.tr.repositories.FoodRepositoryDrink;
-import ait.tr.repositories.OrderRepository;
 
 import java.util.List;
 
-public class Menu {
+public class MenuView {
 
     private FoodRepositoryBurger foodRepositoryBurger;
     private FoodRepositoryDrink foodRepositoryDrink;
     private FoodRepositoryDessert foodRepositoryDessert;
 
-    public Menu(FoodRepositoryBurger foodRepositoryBurger, FoodRepositoryDrink foodRepositoryDrink, FoodRepositoryDessert foodRepositoryDessert) {
+    public MenuView(FoodRepositoryBurger foodRepositoryBurger, FoodRepositoryDrink foodRepositoryDrink, FoodRepositoryDessert foodRepositoryDessert) {
 
         this.foodRepositoryBurger = foodRepositoryBurger;
         this.foodRepositoryDessert = foodRepositoryDessert;

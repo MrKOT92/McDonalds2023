@@ -3,16 +3,17 @@ package ait.tr.app;
 import static ait.tr.menus.SubMenu.displayMenu;
 import static ait.tr.menus.SubMenu.handleSubMenu;
 
-import ait.tr.menus.Menu;
+import ait.tr.menus.MenuView;
 import ait.tr.models.Order;
 import ait.tr.repositories.*;
 import ait.tr.services.FoodService;
 import ait.tr.services.OrderService;
+
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Main {
- public static int typeOfOrder;
+  public static int typeOfOrder;
 
 
   public static void main(String[] args) throws FileNotFoundException {
@@ -26,7 +27,7 @@ public class Main {
     FoodService service = new FoodService(burgerRepository, drinkRepository, dessertRepository);
     OrderRepository orderRepository = new OrderRepository("orders.txt");
     OrderService orderService = new OrderService(orderRepository);
-    Menu menu = new Menu(burgerRepository, drinkRepository,dessertRepository);
+    MenuView menu = new MenuView(burgerRepository, drinkRepository,dessertRepository);
 
 
 
