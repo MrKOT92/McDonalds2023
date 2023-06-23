@@ -23,7 +23,7 @@ public class MenuView {
 
     public void printMenuDrink() {
         List<Food> list = foodRepositoryDrink.findAll();
-        System.out.println("---- Drink menu ----");
+        System.out.println("---- Drinks menu ----");
         for (Food food : list) {
             System.out.println(list.indexOf(food) + 1 + ". " +
                     food.getTitle() + " " + food.getPrice());
@@ -32,7 +32,7 @@ public class MenuView {
 
     public void printMenuDessert() {
         List<Food> list = foodRepositoryDessert.findAll();
-        System.out.println("---- Dessert menu ----");
+        System.out.println("---- Desserts menu ----");
         for (Food food : list) {
             System.out.println(list.indexOf(food) + 1 + ". " +
                     food.getTitle() + " " + food.getPrice());
@@ -41,7 +41,7 @@ public class MenuView {
 
     public void printMenuBurger() {
         List<Food> list = foodRepositoryBurger.findAll();
-        System.out.println("----Burger menu ----");
+        System.out.println("----Burgers menu ----");
         for (Food food : list) {
             System.out.println(list.indexOf(food) + 1 + ". " +
                     food.getTitle() + " " + food.getPrice());
@@ -49,14 +49,14 @@ public class MenuView {
     }
 
     public void finalMessage(Order order) {
-        System.out.println("Thank you, you payment was successful. " + System.lineSeparator() +
-                "Pick up the order number: " + order.getNumber());
+        System.out.println("Thank you, your order has been paid successfully. " + System.lineSeparator() +
+                "Your order number: " + order.getNumber());
     }
 
     public void printOrder(Order order){
         System.out.println("_________________");
         System.out.println("Your order number: " + order.getNumber());
-        List<Food> list = order.getOrderlist();
+        List<Food> list = order.getOrderList();
         for (Food food: list
         ) {
             System.out.println(food.getTitle() + " " + food.getPrice());

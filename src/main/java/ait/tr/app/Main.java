@@ -1,13 +1,12 @@
 package ait.tr.app;
 
 import static ait.tr.menus.SubMenu.displayMenu;
-import static ait.tr.menus.SubMenu.handleSubMenu;
+import static ait.tr.menus.SubMenu.chooseFromMenu;
 
 import ait.tr.menus.MenuView;
-import ait.tr.models.Order;
 import ait.tr.repositories.*;
-import ait.tr.services.FoodService;
-import ait.tr.services.OrderService;
+import ait.tr.services.FoodServiceImpl;
+import ait.tr.services.OrderServiceImpl;
 
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -24,9 +23,9 @@ public class Main {
     FoodRepositoryDessert dessertRepository = new FoodRepositoryDessert("dessert.txt");
     FoodRepositoryDrink drinkRepository = new FoodRepositoryDrink("drink.txt");
 
-    FoodService service = new FoodService(burgerRepository, drinkRepository, dessertRepository);
-    OrderRepository orderRepository = new OrderRepository("orders.txt");
-    OrderService orderService = new OrderService(orderRepository);
+    FoodServiceImpl service = new FoodServiceImpl(burgerRepository, drinkRepository, dessertRepository);
+    OrderRepositoryImpl orderRepository = new OrderRepositoryImpl("orders.txt");
+    OrderServiceImpl orderService = new OrderServiceImpl(orderRepository);
     MenuView menu = new MenuView(burgerRepository, drinkRepository,dessertRepository);
 
 
@@ -38,7 +37,7 @@ public class Main {
 //TODO int command and typeOfOrder, subChoice only numbers...Cristian
     //TODO rename Methods and var
     while (true) {
-      System.out.println("1. Hello, Welcome to our McDonald's!");
+      System.out.println("1. Hello! Welcome to our McDonald's!");
       System.out.println("0. Exit");
 
       int command;
@@ -53,7 +52,7 @@ public class Main {
         case 1:
           int typeOfOrder;
           while (true) {
-            System.out.println("Where will you eat? Press: 1-Here, 2-To Go");
+            System.out.println("Where would you like to eat? Press: 1-Here, 2-To Go");
             try {
               typeOfOrder = Integer.parseInt(scanner.nextLine());
               if (typeOfOrder == 1 || typeOfOrder == 2) {
@@ -76,14 +75,14 @@ public class Main {
             continue;
           }
 
-          handleSubMenu(subChoice, service, orderService, burgerRepository, menu);
+          chooseFromMenu(subChoice, service, orderService, burgerRepository, menu);
           break;
         case 0:
           System.out.println("Goodbye!");
           System.exit(0);
           break;
         default:
-          System.out.println("Invalid choice");
+          System.out.println("Invalid input");
           break;
       }
     }

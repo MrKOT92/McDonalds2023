@@ -8,21 +8,21 @@ public class Order {
 
     private String id;
     private int number;
-    private static int countDayOrders = 1;
-    private List<Food> orderlist;
+    private static int countOrdersNumberPerDay = 1;
+    private List<Food> orderList;
     private boolean isPayed;
 
-    public Order(String id, int number, List<Food> orderlist, boolean isPayed) {
+    public Order(String id, int number, List<Food> orderList, boolean isPayed) {
       this.id = id;
       this.number = number;
-      this.orderlist = orderlist;
+      this.orderList = orderList;
       this.isPayed = isPayed;
     }
     public Order() {
         this.id = UUID.randomUUID().toString();
-        this.number = countDayOrders;
-        this.orderlist = new ArrayList<>();
-        this.countDayOrders++;
+        this.number = countOrdersNumberPerDay;
+        this.orderList = new ArrayList<>();
+        this.countOrdersNumberPerDay++;
         this.isPayed = false;
     }
 
@@ -34,8 +34,8 @@ public class Order {
         return number;
     }
 
-    public List<Food> getOrderlist() {
-        return orderlist;
+    public List<Food> getOrderList() {
+        return orderList;
     }
 
     public void setPayed(boolean payed) {

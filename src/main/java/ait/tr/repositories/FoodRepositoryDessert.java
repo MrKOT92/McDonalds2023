@@ -30,7 +30,7 @@ public class FoodRepositoryDessert implements FoodRepository{
         line = bufferedReader.readLine();
       }
     } catch (IOException e) {
-      System.err.println("Произошла ошибка");
+      System.err.println("An error occurred");
     }
 
     return desserts;

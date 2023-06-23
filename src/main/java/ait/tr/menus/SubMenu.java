@@ -3,9 +3,8 @@ package ait.tr.menus;
 import ait.tr.models.Food;
 import ait.tr.models.Order;
 import ait.tr.repositories.*;
-import ait.tr.services.FoodService;
-import ait.tr.services.IOrderService;
-import ait.tr.services.OrderService;
+import ait.tr.services.FoodServiceImpl;
+import ait.tr.services.OrderServiceImpl;
 
 import java.util.Scanner;
 
@@ -16,16 +15,16 @@ public class SubMenu {
   static Scanner scanner= new Scanner(System.in);
 
   public static void displayMenu() {
-    System.out.println("1. Choose Burger");
-    System.out.println("2. Choose Dessert");
-    System.out.println("3. Choose Drink");
-    System.out.println("4. Go to confirm order and payment");
+    System.out.println("1. Choose a burger");
+    System.out.println("2. Choose a dessert");
+    System.out.println("3. Choose a drink");
+    System.out.println("4. Go to order confirmation and payment");
     System.out.println("0. Exit");
   }
 
   //TODO ????
-  public static void handleSubMenu(int subChoice, FoodService service,
-      OrderService orderService, FoodRepositoryBurger foodRepositoryBurger, MenuView menu) {
+  public static void chooseFromMenu(int subChoice, FoodServiceImpl service,
+                                    OrderServiceImpl orderService, FoodRepositoryBurger foodRepositoryBurger, MenuView menu) {
 
 
     Order order = orderService.createOrder(); //Order{id='63694687-671e-417a-a9a8-b56598867283', number=1, orderlist=[], isPayed=false}
@@ -37,28 +36,28 @@ public class SubMenu {
         case 1:
           try {
             menu.printMenuBurger();
-            int choiceBurger = scanner.nextInt();
-            Food food = service.chooseBurger(choiceBurger);
+            int choiceOfBurger = scanner.nextInt();
+            Food food = service.chooseBurger(choiceOfBurger);
             orderService.addFoodToOrder(order, food);
           } catch (NumberFormatException e) {
             System.out.println("Invalid input. Please enter a number.");
             continue; // Retry with the same subChoice
           } catch (IndexOutOfBoundsException e) {
-            System.out.println("Invalid choice. Please choose a valid option.");
+            System.out.println("Incorrect input. Please select the correct option.");
             continue; // Retry with the same subChoice
           }
           break;
         case 2:
           try{
             menu.printMenuDessert();
-            int choiceDessert = scanner.nextInt();
-            Food food = service.chooseDessert(choiceDessert);
+            int choiceOfDessert = scanner.nextInt();
+            Food food = service.chooseDessert(choiceOfDessert);
             orderService.addFoodToOrder(order, food);}
           catch (NumberFormatException e) {
             System.out.println("Invalid input. Please enter a number.");
             continue; // Retry with the same subChoice
           } catch (IndexOutOfBoundsException e) {
-            System.out.println("Invalid choice. Please choose a valid option.");
+            System.out.println("Incorrect input. Please select the correct option.");
             continue; // Retry with the same subChoice
           }
           break;
@@ -66,8 +65,8 @@ public class SubMenu {
         case 3:
           try {
             menu.printMenuDrink();
-            int choiceDrink = scanner.nextInt();
-            Food food = service.chooseDrink(choiceDrink);
+            int choiceOfDrink = scanner.nextInt();
+            Food food = service.chooseDrink(choiceOfDrink);
             //add to order
             orderService.addFoodToOrder(order, food);
           }
@@ -75,30 +74,30 @@ public class SubMenu {
             System.out.println("Invalid input. Please enter a number.");
             continue; // Retry with the same subChoice
           } catch (IndexOutOfBoundsException e) {
-            System.out.println("Invalid choice. Please choose a valid option.");
+            System.out.println("Incorrect input. Please select the correct option.");
             continue; // Retry with the same subChoice
           }
           break;
 
 
         case 4:
-          displayOrderMenu();
+          displayChosenPositions();
           try {
 
 
-            int orderMenuChoice = Integer.parseInt(scanner.nextLine());
-            handleOrderMenu(orderMenuChoice, orderService, order, menu);
+            int chosenPositions = Integer.parseInt(scanner.nextLine());
+            confirmChosenPositions(chosenPositions, orderService, order, menu);
           } catch (NumberFormatException e) {
             System.out.println("Invalid input. Please enter a number.");
           }
           break;
 
         case 0:
-          System.out.println("GoodBye");
+          System.out.println("Goodbye!");
           System.exit(0);
           break;
         default:
-          System.out.println("Invalid choice");
+          System.out.println("Invalid input");
           break;
       }
 
@@ -111,14 +110,14 @@ public class SubMenu {
       }
     }
   }
-  public static void displayOrderMenu() {
-    System.out.println("1. Check your order and payment");
+  public static void displayChosenPositions() {
+    System.out.println("1. Please check your order and payment");
     System.out.println("0. Back to menu");  ///
   }
 
   //TODO after 1. return to displayMenu
-  public static void handleOrderMenu(int orderMenuChoice, OrderService orderService, Order order, MenuView menu) {
-    switch (orderMenuChoice) {
+  public static void confirmChosenPositions(int chosenPositions, OrderServiceImpl orderService, Order order, MenuView menu) {
+    switch (chosenPositions) {
       case 1:
         //TODO Logic for checking the order
         menu.printOrder(order);
@@ -127,7 +126,7 @@ public class SubMenu {
           menu.finalMessage(order);
         }
         else {
-          System.out.println("Sorry you order not payed");
+          System.out.println("Sorry, your order has not been payed");
         }
         break;
 
@@ -139,7 +138,7 @@ public class SubMenu {
         // Logic for going back to the main menu
         break;
       default:
-        System.out.println("Invalid choice");
+        System.out.println("Invalid input");
         break;
     }
   }

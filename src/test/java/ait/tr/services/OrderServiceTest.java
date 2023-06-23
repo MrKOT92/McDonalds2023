@@ -13,11 +13,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class OrderServiceTest {
 
-    private OrderService orderService;
+    private OrderServiceImpl orderService;
 
     @BeforeEach
     public void setUp(){
-        this.orderService = new OrderService(new OrderRepositoryListImpl());
+        this.orderService = new OrderServiceImpl(new OrderRepositoryListImpl());
     }
 
 
@@ -46,7 +46,7 @@ class OrderServiceTest {
                         96.0,false,false,253,
                         "beef","ketchup"))), false);
 
-        double actual = orderService.getTotalSumOrder(order);
+        double actual = orderService.getTotalSumOfOrder(order);
         double expected = 1.2;
         assertEquals(expected,actual);
     }
@@ -54,7 +54,7 @@ class OrderServiceTest {
     @Test
     void getTotalSumOrderIfNull() {
         Order order = new Order();
-        double actual = orderService.getTotalSumOrder(order);
+        double actual = orderService.getTotalSumOfOrder(order);
         double expected = 0.0;
         assertEquals(expected,actual);
     }
