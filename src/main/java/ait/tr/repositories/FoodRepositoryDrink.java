@@ -23,7 +23,6 @@ public class FoodRepositoryDrink implements FoodRepository{
 
     try (FileReader fileReader = new FileReader(fileName);
         BufferedReader bufferedReader = new BufferedReader(fileReader)) {
-
       String line = bufferedReader.readLine();
 
       while (line != null) {
@@ -32,7 +31,7 @@ public class FoodRepositoryDrink implements FoodRepository{
         line = bufferedReader.readLine();
       }
     } catch (IOException e) {
-      System.err.println("Произошла ошибка");
+      System.err.println("Error!!!");
     }
 
     return drinks;

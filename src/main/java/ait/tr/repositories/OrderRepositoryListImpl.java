@@ -5,7 +5,7 @@ import ait.tr.models.Order;
 import java.util.ArrayList;
 import java.util.List;
 
-public class OrderRepositoryListImpl implements IOrderRepository{
+public class OrderRepositoryListImpl implements OrderRepository {
 
     private List<Order> dayOrders = new ArrayList<>(List.of(
             new Order(), new Order(), new Order()
@@ -29,9 +29,16 @@ public class OrderRepositoryListImpl implements IOrderRepository{
         throw new NullPointerException("Order is not found");
     }
 
-    //TODO
     @Override
-    public void remove(Order order) {
+    public Order findByIdFile(String id) {
+        return null;
+    }
 
+    @Override
+    public void remove(String id) {
+
+    }
+    public List<Order> findAllOrders(){
+        return null;
     }
 }

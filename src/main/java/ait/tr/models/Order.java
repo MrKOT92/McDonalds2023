@@ -1,8 +1,6 @@
 package ait.tr.models;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
 public class Order {
 
@@ -10,6 +8,7 @@ public class Order {
     private int number;
     private static int countDayOrders = 1;
     private List<Food> orderlist;
+
     private boolean isPayed;
 
     public Order(String id, int number, List<Food> orderlist, boolean isPayed) {
@@ -18,6 +17,13 @@ public class Order {
       this.orderlist = orderlist;
       this.isPayed = isPayed;
     }
+
+    public Order(String id, int number, boolean isPayed) {
+        this.id = id;
+        this.number = number;
+        this.isPayed = isPayed;
+    }
+
     public Order() {
         this.id = UUID.randomUUID().toString();
         this.number = countDayOrders;
@@ -45,4 +51,17 @@ public class Order {
     public boolean isPayed() {
         return isPayed;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Order order)) return false;
+        return getNumber() == order.getNumber() && isPayed() == order.isPayed() && Objects.equals(getId(), order.getId()) && Objects.equals(getOrderlist(), order.getOrderlist());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId(), getNumber(), getOrderlist(), isPayed());
+    }
+
 }

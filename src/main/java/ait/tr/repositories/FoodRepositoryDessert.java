@@ -30,7 +30,7 @@ public class FoodRepositoryDessert implements FoodRepository{
         line = bufferedReader.readLine();
       }
     } catch (IOException e) {
-      System.err.println("Произошла ошибка");
+      System.err.println("Error!!!");
     }
 
     return desserts;
@@ -50,17 +50,4 @@ public class FoodRepositoryDessert implements FoodRepository{
   }
 
 }
-//  public void saveNewUser(Food dessert) {
-//
-//    try (
-//        FileWriter fileWriter = new FileWriter(fileName, true);
-//        BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)) {;
-//      bufferedWriter.write(dessert.getTitle() + "|" + dessert.getPrice() + "|" + dessert.getWeight()
-//          + "|" + dessert.isVegan() + "|" + dessert.isForKids() + "|" + dessert.getCalories());
-//      bufferedWriter.newLine();
-//
-//    } catch (Exception e) {
-//      System.out.println("Произошла ошибка");
-//    }
-//  }
 

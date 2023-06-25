@@ -12,17 +12,6 @@ public class Burger extends Food{
     this.sauce = sauce;
 
   }
-  public String getCutletType(){
-    return cutletType;
-  }
-  public String getSauce(){
-    return sauce;
-  }
-  public void setCutletType(String cutletType){
-    this.cutletType = cutletType;
-  }
-  public void setSauce(String sauce){
-    this.sauce = sauce;
-  }
+
 
 }

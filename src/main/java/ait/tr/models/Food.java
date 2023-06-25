@@ -74,10 +74,6 @@ public class Food {
     return "Food{" +
         "title='" + title + '\'' +
         ", price=" + price +
-        ", weight=" + weight +
-        ", isVegan=" + isVegan +
-        ", isForKids=" + isForKids +
-        ", calories=" + calories +
         '}';
   }
 

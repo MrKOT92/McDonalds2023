@@ -6,7 +6,5 @@ import java.util.List;
 public interface FoodRepository {
 
 
-
-  //TODO use stream API
   List<Food> findAll();
 }

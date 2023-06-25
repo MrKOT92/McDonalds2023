@@ -35,7 +35,7 @@ public class FoodRepositoryBurger implements FoodRepository{
         line = bufferedReader.readLine();
       }
     } catch (IOException e) {
-      System.err.println("Произошла ошибка");
+      System.err.println("Error!!!");
     }
 
     return burgers;
@@ -53,16 +53,6 @@ public class FoodRepositoryBurger implements FoodRepository{
     return new Burger(title,price,weight,isVegan,isForKids,calories,cutletType,sauce);
 
   }
-
-//  public void printMenu() {
-//    List<Food> list = findAll();
-//    System.out.println("---- Menu ----");
-//    for (Food food : list) {
-//      System.out.println(list.indexOf(food) + 1 + ". " +
-//              food.getTitle() + " " + food.getPrice());
-//    }
-//  }
-
 
 
 }
