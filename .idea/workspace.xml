@@ -5,30 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5aeb6a19-db9f-428b-a80a-5470ba0b8655" name="Changes" comment="final code">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ait/tr/repositories/OrderRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ait/tr/services/FoodServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ait/tr/services/OrderServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/orders.txt" beforeDir="false" afterPath="$PROJECT_DIR$/orders.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/app/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/menus/AdminMenu.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/menus/MenuView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/menus/MenuView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/menus/SubMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/menus/SubMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/models/Burger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/models/Burger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/models/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/models/Food.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/models/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/models/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/repositories/FoodRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/repositories/FoodRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/repositories/FoodRepositoryBurger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/repositories/FoodRepositoryBurger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/repositories/FoodRepositoryDessert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/repositories/FoodRepositoryDessert.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/repositories/FoodRepositoryDrink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/repositories/FoodRepositoryDrink.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/repositories/IOrderRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/repositories/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/repositories/OrderRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/repositories/OrderRepositoryListImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/repositories/OrderRepositoryListImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/services/FoodService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/services/FoodService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/services/IFoodService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/services/IOrderService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ait/tr/services/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ait/tr/services/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ait/tr/services/OrderServiceTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687288847087</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="final code">
+      <created>1687730115191</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1687730115191</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

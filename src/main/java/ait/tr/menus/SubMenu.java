@@ -3,138 +3,142 @@ package ait.tr.menus;
 import ait.tr.models.Food;
 import ait.tr.models.Order;
 import ait.tr.repositories.*;
-import ait.tr.services.FoodService;
-import ait.tr.services.IOrderService;
-import ait.tr.services.OrderService;
+import ait.tr.services.FoodServiceImpl;
+import ait.tr.services.OrderServiceImpl;
 
 import java.util.Scanner;
 
 public class SubMenu {
 
-  private FoodRepositoryBurger foodRepositoryBurger;
   private MenuView menu;
-  static Scanner scanner= new Scanner(System.in);
+  public static Scanner scanner = new Scanner(System.in);
 
   public static void displayMenu() {
-    System.out.println("1. Choose Burger");
-    System.out.println("2. Choose Dessert");
-    System.out.println("3. Choose Drink");
-    System.out.println("4. Go to confirm order and payment");
+    System.out.println("1. Choose a Burger");
+    System.out.println("2. Choose a Dessert");
+    System.out.println("3. Choose a Drink");
+    System.out.println("4. Go to confirmation of order and payment");
     System.out.println("0. Exit");
   }
 
-  //TODO ????
-  public static void handleSubMenu(int subChoice, FoodService service,
-      OrderService orderService, FoodRepositoryBurger foodRepositoryBurger, MenuView menu) {
-
-    Order order = orderService.createOrder(); // Order{id='63694687-671e-417a-a9a8-b56598867283', number=1, orderlist=[], isPayed=false}
-
+  public static void chooseFromMenu(int subChoice, FoodServiceImpl service,
+      OrderServiceImpl orderServiceImpl, FoodRepositoryBurger foodRepositoryBurger, MenuView menu) {
+    Order order = orderServiceImpl.createOrder();
     while (true) {
-
-      switch (subChoice) {
-        case 1:
-          try {
+      try {
+        switch (subChoice) {
+          case 1:
             menu.printMenuBurger();
             int choiceBurger = Integer.parseInt(scanner.nextLine());
-            Food food = service.chooseBurger(choiceBurger);
-            orderService.addFoodToOrder(order, food);
-          } catch (NumberFormatException e) {
-            System.out.println("Invalid input. Please enter a number.");
-            continue; // Retry with the same subChoice
-          } catch (IndexOutOfBoundsException e) {
-            System.out.println("Invalid choice. Please choose a valid option.");
-            continue; // Retry with the same subChoice
-          }
-          break;
-        case 2:
-          try {
+            Food burger = service.chooseBurger(choiceBurger);
+            orderServiceImpl.addFoodToOrder(order, burger);
+            break;
+          case 2:
             menu.printMenuDessert();
             int choiceDessert = Integer.parseInt(scanner.nextLine());
-            Food food = service.chooseDessert(choiceDessert);
-            orderService.addFoodToOrder(order, food);
-          } catch (NumberFormatException e) {
-            System.out.println("Invalid input. Please enter a number.");
-            continue; // Retry with the same subChoice
-          } catch (IndexOutOfBoundsException e) {
-            System.out.println("Invalid choice. Please choose a valid option.");
-            continue; // Retry with the same subChoice
-          }
-          break;
-        case 3:
-          try {
+            Food dessert = service.chooseDessert(choiceDessert);
+            orderServiceImpl.addFoodToOrder(order, dessert);
+            break;
+          case 3:
             menu.printMenuDrink();
             int choiceDrink = Integer.parseInt(scanner.nextLine());
-            Food food = service.chooseDrink(choiceDrink);
-            // Add to order
-            orderService.addFoodToOrder(order, food);
-          } catch (NumberFormatException e) {
-            System.out.println("Invalid input. Please enter a number.");
-            continue; // Retry with the same subChoice
-          } catch (IndexOutOfBoundsException e) {
-            System.out.println("Invalid choice. Please choose a valid option.");
-            continue; // Retry with the same subChoice
-          }
-          break;
-        case 4:
-          displayOrderMenu();
-          try {
-            int orderMenuChoice = Integer.parseInt(scanner.nextLine());
-            handleOrderMenu(orderMenuChoice, orderService, order, menu);
-            if (orderMenuChoice == 0) {
-             return; // Return to the main menu
+            Food drink = service.chooseDrink(choiceDrink);
+            orderServiceImpl.addFoodToOrder(order, drink);
+            break;
+          case 4:
+            int orderMenuChoice = displayChosenPositions();
+            if (orderMenuChoice == 1) {
+              confirmChosenPositions(orderMenuChoice, orderServiceImpl, order, menu);
+            } else if (orderMenuChoice == 0) {
+              break;
+            } else {
+              System.out.println("Invalid input. Please enter a valid option.");
+              chooseFromMenu(subChoice, service, orderServiceImpl, foodRepositoryBurger, menu);
             }
-          } catch (NumberFormatException e) {
-            System.out.println("Invalid input. Please enter a number.");
+            break;
+          case 0:
+            System.out.println("Goodbye");
+            System.exit(0);
+          default:
+            System.out.println("Invalid choice");
+            break;
+        }
+
+        displayMenu();
+        subChoice = Integer.parseInt(scanner.nextLine());
+      } catch (NumberFormatException e) {
+        System.out.println("Invalid input. Please enter a number.");
+      } catch (IndexOutOfBoundsException e) {
+        System.out.println("Invalid choice. Please choose a valid option.");
+      }
+    }
+  }
+
+  public static int displayChosenPositions() {
+    boolean validChoice = false;
+    int choice = 0;
+
+    while (!validChoice) {
+      System.out.println("1. Please check your order and payment");
+      System.out.println("0. Back to menu");
+      try {
+        choice = Integer.parseInt(scanner.nextLine());
+        if (choice == 0 || choice == 1) {
+          validChoice = true;
+        } else {
+          System.out.println("Invalid input. Please enter a valid option.");
+        }
+      } catch (NumberFormatException e) {
+        System.out.println("Invalid input. Please enter a number.");
+      }
+    }
+
+    return choice;
+  }
+
+  public static int confirmChosenPositions(int chosenPositions, OrderServiceImpl orderServiceImpl, Order order, MenuView menu) {
+    boolean validChoice = false;
+
+    while (!validChoice) {
+      switch (chosenPositions) {
+        case 1:
+          menu.printOrder(order);
+          System.out.printf("Sum: %.2f euro%n", orderServiceImpl.getTotalSumOrder(order));
+          System.out.println("Confirm and pay please (Y/N):");
+          String choice = scanner.nextLine();
+
+          try {
+            if (choice.equalsIgnoreCase("Y")) {
+              boolean confirmation = orderServiceImpl.confirmOrder(order, choice);
+              if (confirmation) {
+                menu.finalMessage(order);
+                System.out.println("Goodbye, we'll be glad to see you again!!!");
+                System.exit(0);
+              } else {
+                System.out.println("Sorry, your order was not paid, try again...");
+                validChoice = true;
+              }
+            } else if (choice.equalsIgnoreCase("N")) {
+              System.out.println("An error occurred during payment, please choose again...");
+              validChoice = true;
+              return 0;
+            } else {
+              System.out.println("Invalid choice. Please enter Y or N.");
+            }
+          } catch (Exception e) {
+            System.out.println("An error occurred. Please try again.");
+            validChoice = true;
           }
+
           break;
         case 0:
-          System.out.println("Goodbye!");
-          return; // Return to the main menu
+          validChoice = true;
+          break;
         default:
           System.out.println("Invalid choice");
           break;
       }
-
-      displayMenu();
-      try {
-        subChoice = Integer.parseInt(scanner.nextLine());
-      } catch (NumberFormatException e) {
-        System.out.println("Invalid input. Please enter a number.");
-      }catch (IndexOutOfBoundsException e) {
-        System.out.println("Invalid choice. Please choose a valid option.");
-      }
-      }
     }
-
-  public static void displayOrderMenu() {
-    System.out.println("1. Check your order and payment");
-    System.out.println("0. Back to menu");  ///
-  }
-
-  //TODO after 1. return to displayMenu
-  public static void handleOrderMenu(int orderMenuChoice, OrderService orderService, Order order, MenuView menu) {
-    switch (orderMenuChoice) {
-      case 1:
-        //TODO Logic for checking the order
-        menu.printOrder(order);
-        boolean confirmation = orderService.confirmOrder(order);
-        if (confirmation){
-          menu.finalMessage(order);
-        }
-        else {
-          System.out.println("Sorry you order not payed");
-        }
-        break;
-
-      //TODO case 0  = back to displayMenu()
-      case 0:
-        //displayMenu();
-
-        // Logic for going back to the main menu
-        break;
-      default:
-        System.out.println("Invalid choice");
-        break;
-    }
+    return chosenPositions;
   }
 }

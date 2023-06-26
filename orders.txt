@@ -1,13 +1,13 @@
-ec0c9954-9492-4024-9d62-ab95b16964a6|1|[Food{title='Hamburger', price=1.2, weight=96.0, isVegan=false, isForKids=false, calories=253}, Food{title='Strawberry-milkshake', price=3.89, weight=276.0, isVegan=false, isForKids=true, calories=316}, Food{title='CocaCola-Classic', price=3.0, weight=0.5, isVegan=true, isForKids=true, calories=140}]|false
-3c32ee04-f8fc-4f2b-8af3-4b975632d2a6|1|[Food{title='Hamburger', price=1.2, weight=96.0, isVegan=false, isForKids=false, calories=253}, Food{title='Chocolate milkshake', price=3.89, weight=277.0, isVegan=false, isForKids=true, calories=325}, Food{title='ColaCola-Light', price=3.0, weight=0.5, isVegan=true, isForKids=true, calories=100}]|false
-e81edd35-a75f-47ec-b08b-7259f7da9298|1|[Food{title='Hamburger', price=1.2, weight=96.0, isVegan=false, isForKids=false, calories=253}, Food{title='Hamburger', price=1.2, weight=96.0, isVegan=false, isForKids=false, calories=253}, Food{title='Chocolate milkshake', price=3.89, weight=277.0, isVegan=false, isForKids=true, calories=325}, Food{title='Chocolate milkshake', price=3.89, weight=277.0, isVegan=false, isForKids=true, calories=325}]|false
-e81edd35-a75f-47ec-b08b-7259f7da9298|1|[Food{title='Hamburger', price=1.2, weight=96.0, isVegan=false, isForKids=false, calories=253}, Food{title='Hamburger', price=1.2, weight=96.0, isVegan=false, isForKids=false, calories=253}, Food{title='Chocolate milkshake', price=3.89, weight=277.0, isVegan=false, isForKids=true, calories=325}, Food{title='Chocolate milkshake', price=3.89, weight=277.0, isVegan=false, isForKids=true, calories=325}, Food{title='Hamburger', price=1.2, weight=96.0, isVegan=false, isForKids=false, calories=253}, Food{title='Hamburger', price=1.2, weight=96.0, isVegan=false, isForKids=false, calories=253}, Food{title='Chocolate milkshake', price=3.89, weight=277.0, isVegan=false, isForKids=true, calories=325}, Food{title='ColaCola-Light', price=3.0, weight=0.5, isVegan=true, isForKids=true, calories=100}]|true
-d3d1aa89-6c20-4bc0-b894-ed9c597e5df3|1|[Food{title='Hamburger', price=1.2, weight=96.0, isVegan=false, isForKids=false, calories=253}, Food{title='Chocolate milkshake', price=3.89, weight=277.0, isVegan=false, isForKids=true, calories=325}, Food{title='ColaCola-Light', price=3.0, weight=0.5, isVegan=true, isForKids=true, calories=100}]|false
-73690c99-0e8e-43d7-9644-097760a2c6ae|1|[]|false
-091ccca8-1ebc-478e-aa52-3439cf8c8678|1|[Food{title='Cheeseburger', price=2.3, weight=109.0, isVegan=false, isForKids=false, calories=302}, Food{title='ColaCola-Light', price=3.0, weight=0.5, isVegan=true, isForKids=true, calories=100}]|false
-091ccca8-1ebc-478e-aa52-3439cf8c8678|1|[Food{title='Cheeseburger', price=2.3, weight=109.0, isVegan=false, isForKids=false, calories=302}, Food{title='ColaCola-Light', price=3.0, weight=0.5, isVegan=true, isForKids=true, calories=100}, Food{title='Hamburger', price=1.2, weight=96.0, isVegan=false, isForKids=false, calories=253}, Food{title='Hamburger', price=1.2, weight=96.0, isVegan=false, isForKids=false, calories=253}, Food{title='Hamburger', price=1.2, weight=96.0, isVegan=false, isForKids=false, calories=253}, Food{title='Strawberry-milkshake', price=3.89, weight=276.0, isVegan=false, isForKids=true, calories=316}]|true
-63452e5a-6913-43c7-aeef-a0209ace3e58|1|[Food{title='Hamburger', price=1.2, weight=96.0, isVegan=false, isForKids=false, calories=253}, Food{title='Chocolate milkshake', price=3.89, weight=277.0, isVegan=false, isForKids=true, calories=325}]|false
-bc8a1c10-44c3-4342-8adc-7f1b6256d0cd|1|[Food{title='Hamburger', price=1.2, weight=96.0, isVegan=false, isForKids=false, calories=253}, Food{title='McFlurry Bounty', price=4.39, weight=196.0, isVegan=false, isForKids=true, calories=378}, Food{title='Strawberry-pie', price=1.59, weight=78.0, isVegan=false, isForKids=true, calories=250}, Food{title='Chocolate milkshake', price=3.89, weight=277.0, isVegan=false, isForKids=true, calories=325}, Food{title='Hamburger', price=1.2, weight=96.0, isVegan=false, isForKids=false, calories=253}, Food{title='McFlurry Bounty', price=4.39, weight=196.0, isVegan=false, isForKids=true, calories=378}, Food{title='CocaCola-Classic', price=1.5, weight=0.2, isVegan=true, isForKids=true, calories=70}]|false
+ec0c9954-9492-4024-9d62-ab95b16964a6|1|false
+3c32ee04-f8fc-4f2b-8af3-4b975632d2a6|1|false
+e81edd35-a75f-47ec-b08b-7259f7da9298|1|false
+e81edd35-a75f-47ec-b08b-7259f7da9298|1|false
+d3d1aa89-6c20-4bc0-b894-ed9c597e5df3|1|false
+73690c99-0e8e-43d7-9644-097760a2c6ae|1|false
+091ccca8-1ebc-478e-aa52-3439cf8c8678|1|false
+091ccca8-1ebc-478e-aa52-3439cf8c8678|1|false
+63452e5a-6913-43c7-aeef-a0209ace3e58|1|false
+bc8a1c10-44c3-4342-8adc-7f1b6256d0cd|1|false
 5bf57fa6-85ac-4dff-bf58-36afd38757db|5|true
 444bb78e-0e1e-4953-a60d-e0fa72a38850|1|true
 91f7960b-fcb8-46c0-b1e7-3d3b1ea17fc4|1|true
@@ -17,3 +17,5 @@ d25ce95b-ef85-4902-ab72-1d70e8766125|1|true
 dfed41f4-8efd-44c3-81b7-cc11d6033de4|1|true
 950699f4-8400-4d7a-942f-7c8ae5df9d86|1|true
 c7caf5cb-eb5d-493d-831c-1bb78333ef45|1|true
+0df364de-c345-4eef-81fa-d914020b53c4|1|true
+3ae79409-f73b-4fd4-ac46-f62f4f09a0cb|1|true
